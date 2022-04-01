@@ -1,20 +1,32 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StatusBar } from "expo-status-bar";
+import { SafeAreaView } from "react-native";
+
+import ViewImage from "./src/Views/ViewImage.js";
+import MainView from "./src/Views/MainView.js";
+import EstacioView from "./src/Views/EstacioView.js";
+import NameProduto from "./src/Views/NameProduto.js";
+import ImageSony from "./src/Views/ImageSony.js";
+import Descricao from "./src/Views/Descricao.js";
+import Preco from "./src/Views/Preco.js";
+import ButtonCarrinho from "./src/Buttons/ButtonCarrinho.js";
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <SafeAreaView>
+      <ViewImage />
+
+      <NameProduto />
+
+      <ImageSony />
+
+      <Descricao />
+
+      <Preco />
+
+      <ButtonCarrinho />
+
+      <MainView />
+      <EstacioView />
+    </SafeAreaView>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
