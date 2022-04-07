@@ -23,10 +23,8 @@ export default function App() {
 
       <Preco />
 
-      <ButtonCarrinho />
+      < ButtonCarrinho />
 
-      <MainView />
-      <EstacioView />
     </SafeAreaView>
   );
 }
