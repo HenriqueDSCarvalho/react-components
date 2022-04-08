@@ -1,30 +1,21 @@
-import { StatusBar } from "expo-status-bar";
-import { SafeAreaView } from "react-native";
+import { NavigationContainer } from "@react-navigation/native";
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import Home from "./src/Views/Home";
+import About from "./src/Views/About";
+import Xbox from "./src/Views/Xbox";
 
-import ViewImage from "./src/Views/ViewImage.js";
-import MainView from "./src/Views/MainView.js";
-import EstacioView from "./src/Views/EstacioView.js";
-import NameProduto from "./src/Views/NameProduto.js";
-import ImageSony from "./src/Views/ImageSony.js";
-import Descricao from "./src/Views/Descricao.js";
-import Preco from "./src/Views/Preco.js";
-import ButtonCarrinho from "./src/Buttons/ButtonCarrinho.js";
+
+const Stack = createNativeStackNavigator();
 
 export default function App() {
   return (
-    <SafeAreaView>
-      <ViewImage />
-
-      <NameProduto />
-
-      <ImageSony />
-
-      <Descricao />
-
-      <Preco />
-
-      < ButtonCarrinho />
-
-    </SafeAreaView>
+    <NavigationContainer>
+      <Stack.Navigator>
+          <Stack.Screen name="Xbox" component={Xbox}/>
+          <Stack.Screen name="Home" component={Home} />
+          <Stack.Screen name="About" component={About}/>
+      </Stack.Navigator>
+    </NavigationContainer>
+  
   );
 }
